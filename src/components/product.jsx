@@ -5,11 +5,14 @@ import QuantityPicker from './quantityPicker';
 const Product = (props) => {
 
 
+ 
+
     return(
         <div className='product'>
             <div className='images'>
-                <img src="https://picsum.photos/seed/picsum/536/354" alt="mountain" />    
+                <img src={"./img/"+props.image} />    
             </div>
+
             <h2>{props.title}</h2>
             <div className='priceTags'>
             <label>$Price {props.price}</label>

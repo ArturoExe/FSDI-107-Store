@@ -9,6 +9,7 @@ const Catalog = () => {
    
     const loadCatalog = () => {
             console.log("data retrieve");
+            
             let service=new DataService();
             let data=service.getCatalog();
             setProduct(data);
@@ -27,7 +28,7 @@ const Catalog = () => {
             
             <div className='catalog'>
                 {
-                    product.map((prod)=>(<Product key={prod._id} title={prod.title} price={prod.price} />))
+                    product.map((prod)=>(<Product key={prod._id} title={prod.title} price={prod.price} image={prod.image} />))
                 }
             </div>
     );   

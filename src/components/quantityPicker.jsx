@@ -1,9 +1,15 @@
 import { useState } from 'react';
 import './quantityPicker.css'
 
+
+
 const QuantityPicker = () => {
         //setter
-        let [quantity,setQuantity]= useState(0);
+        let [quantity,setQuantity]= useState(()=>{
+            //We use  this type of useStato to render only the initial state of the component 
+            //intead of every time the compoment re-renders
+            console.log("Initial state 0");
+            return 0;});
 
         //decrement function
         const decrement = () => {
@@ -13,7 +19,7 @@ const QuantityPicker = () => {
             }
             else{
                 console.log("Decrement number");
-                setQuantity(quantity-1);
+                setQuantity(prevQuantity=>prevQuantity-1);
             }
           
 
@@ -22,7 +28,9 @@ const QuantityPicker = () => {
         //Increment function
         const increment = () => {
             console.log("Increment Number");
-            setQuantity(quantity+1);
+            setQuantity(prevQuantity=>prevQuantity+1);
+
+
         }
 
     return(
