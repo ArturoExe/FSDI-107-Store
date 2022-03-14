@@ -10,14 +10,14 @@ var catalog=[
     {
         _id:"I2",
         title:"Air Force 2",
-        price:100,
+        price:100.99,
         stock:10,
         image:"IMG-2.jpg"
     },
     {
         _id:"I3",
         title:"Air Force 3",
-        price:60,
+        price:60.22,
         stock:10,
         image:"IMG-3.jpg"
 
@@ -25,14 +25,14 @@ var catalog=[
     {
         _id:"I4",
         title:"Air Force 4",
-        price:50,
+        price:50.44,
         stock:10,
         image:"IMG-4.jpg"
 
     },{
         _id:"I5",
         title:"Air Force 5",
-        price:40,
+        price:40.10,
         stock:10,
         image:"IMG-5.jpg"
 

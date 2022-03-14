@@ -3,33 +3,31 @@ import './quantityPicker.css'
 
 
 
-const QuantityPicker = () => {
+const QuantityPicker = (props) => {
         //setter
-        let [quantity,setQuantity]= useState(()=>{
-            //We use  this type of useStato to render only the initial state of the component 
-            //intead of every time the compoment re-renders
-            console.log("Initial state 0");
-            return 0;});
-
+        let [quantity,setQuantity]= useState(1)
         //decrement function
         const decrement = () => {
+            let value =quantity;
 
-            if(quantity<=0){
-                console.log("Negative number");
+            if(quantity>1){
+               value=value-1;
             }
-            else{
+           
                 console.log("Decrement number");
-                setQuantity(prevQuantity=>prevQuantity-1);
-            }
+                setQuantity(value);
+                props.onChange(value);
+             
           
 
         }
 
         //Increment function
         const increment = () => {
+            let value = quantity+1;
             console.log("Increment Number");
-            setQuantity(prevQuantity=>prevQuantity+1);
-
+            setQuantity(value);
+            props.onChange(value);
 
         }
 
